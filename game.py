@@ -153,7 +153,7 @@ while True:
                         print("Invalid choice or attack on cooldown!")
                     if monster_health <= 0:
                         print(f"You defeated the {monster_type}! You gain skill points.")
-                        player_skill_points += 1
+                        player_skill_points += 5
                         print(f"Skill points: {player_skill_points}")
                         choice = input("Would you like to go to the shop to buy upgrades? (Press Enter to continue (y/n)) ")
                         if choice.lower() == 'y':
@@ -161,6 +161,23 @@ while True:
                             upgrade_choice = input("""What would you like to upgrade? (1) 10 hp cost: 5 skill points 
                                                    (2) Attack strength upgrade, cost: 10 skill points
                                                     (3) New attack cost:20 skill points """)
+                            if upgrade_choice == '1' and player_skill_points >= 5:
+                                player_health += 10
+                                player_skill_points -= 5
+                                print(f"You upgraded your health! Current health: {player_health}, skill points: {player_skill_points}")
+                            elif upgrade_choice == '2' and player_skill_points >= 10:
+                                attack1_dmg += 5
+                                attack2_dmg += 5
+                                attack3_dmg += 5
+                                player_skill_points -= 10
+                                print(f"You upgraded your attack strength! Current attack damages: {attack1_dmg}, {attack2_dmg}, {attack3_dmg}. Skill points: {player_skill_points}")
+                            elif upgrade_choice == '3' and player_skill_points >= 20:
+                                new_attack_dmg = 20
+                                current_attacks.append("new attack")
+                                attack1_dmg, attack2_dmg, attack3_dmg, new_attack_dmg = attack1_dmg, attack2_dmg, attack3_dmg, new_attack_dmg
+                                player_skill_points -= 20
+                                print(f"You unlocked a new attack! Current attacks: {current_attacks}. Skill points: {player_skill_points}")
+                            else:                                print("Invalid choice or not enough skill points!")
                         break
                     player_health -= monster_attack_dmg
                     print(f"The {monster_type} used {monster_attack} and did {monster_attack_dmg} damage! You now have {player_health} health.")
