@@ -8,17 +8,66 @@ while True:
         monster_dice = random.randint(1, 6)
         if monster_dice == 1:
             monster_type = "witch"
+            monster_health = 30
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "potion"
+                monster_attack_dmg = 15
+            elif attack_dice == 2:
+                monster_attack = "heal" 
+                monster_attack_dmg = 0
         elif monster_dice == 2:
-            monster_type = "syclix"
+            monster_type = "gobilin"
+            monster_health = 20
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "kick"
+                monster_attack_dmg = 5
+            elif attack_dice == 2:
+                monster_attack = "stab" 
+                monster_attack_dmg = 10
         elif monster_dice == 3:
             monster_type = "midusa"
+            monster_health = 80
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "bite"
+                monster_attack_dmg = 5
+            elif attack_dice == 2:
+                monster_attack = "parilize" 
+                monster_attack_dmg = 10
         elif monster_dice == 4:
             monster_type = "minitar"
+            monster_health = 30
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "horse kick"
+                monster_attack_dmg = 5
+            elif attack_dice == 2:
+                monster_attack = "charge" 
+                monster_attack_dmg = 10
         elif monster_dice == 5:
             monster_type = "cyeribis"
+            monster_health = 40
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "triple bite"
+                monster_attack_dmg = random.randint(1,15)
+            elif attack_dice == 2:
+                monster_attack = "bite" 
+                monster_attack_dmg = 10
         elif monster_dice == 6:
             monster_type = "zombie"
-        return monster_type
+            monster_health = 10
+            attack_dice = random.randint(1,2)
+            if attack_dice == 1:
+                monster_attack = "bite"
+                monster_attack_dmg = 5
+            elif attack_dice == 2:
+                monster_attack = "hit" 
+                monster_attack_dmg = 10
+        
+        return (monster_type,monster_health,monster_attack,monster_attack_dmg)
     
     def Chosse_spices():
         player_spices = input("What is your species type? (a) troll, (b) org, (c) vampire, (d) human: ")
@@ -68,19 +117,7 @@ while True:
             
             # Start the game loop here
             while True:
-                monster = monster_dice_roll()
-                print(f"\nA wild {monster} appeared!")
-                print(f"Your health: {player_health}")
-                print(f"Your attacks: {current_attacks}")
-                
-                # Simple placeholder for combat
-                action = input(f"Do you want to (f)ight or (r)un? ")
-                if action.lower() == 'f':
-                    print(f"You used {current_attacks[0]} and dealt damage!")
-                    break # Breaking to prevent infinite loop for now
-                else:
-                    print("You ran away!")
-                    break
+                player_spices
 
     elif choice.lower() == 'n':
         print("Perhaps another time.")
