@@ -19,7 +19,7 @@ def the_first_game():
                 monster_attack = "heal" 
                 monster_attack_dmg = 0
                 print(f"the withch heald and now has {monster_health}")
-                monster_health =+ 10
+                monster_health += 10
         elif monster_dice == 2:
             monster_type = "goblin"
             monster_health = 20
