@@ -1,33 +1,114 @@
 import random
-
 def new_monster_generator():
     dice = random.randint(1,12)
     if dice == 1:
         monster = "skellaten"
-        
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "arrow_shot"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "call for backup" 
+            monster_attack_dmg = 0
 
     if dice == 2:
         monster = "mummy"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "bite"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "drain life" 
+            monster_attack_dmg = 10
+
     if dice == 3:
         monster = "werewolf"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "claw swipe"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "howl" 
+            monster_attack_dmg = 0
     if dice == 4:
         monster = "gargoyal"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "stone throw"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "petrify" 
+            monster_attack_dmg = 10
+
     if dice == 5:
         monster = "Huldra"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "charm"
+            monster_attack_dmg = 0
+        elif attck_dice == 2:
+            monster_attack = "claw swipe" 
+            monster_attack_dmg = 5
     if dice == 6:
         monster = "Liche"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "dark magic"
+            monster_attack_dmg = 10
+        elif attck_dice == 2:
+            monster_attack = "drain life" 
+            monster_attack_dmg = 5
     if dice == 7:
         monster = "Gremlins"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "sabotage"
+            monster_attack_dmg = 0
+        elif attck_dice == 2:
+            monster_attack = "bite" 
+            monster_attack_dmg = 5
     if dice == 8:
         monster = "Wraiths"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "drain life"
+            monster_attack_dmg = 10
+        elif attck_dice == 2:
+            monster_attack = "hit" 
+            monster_attack_dmg = 5
     if dice == 9:
         monster = "Ghoul"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "bite"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "hit" 
+            monster_attack_dmg = 10
     if dice == 10:
         monster = "Revenants"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "bite"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "hit" 
+            monster_attack_dmg = 10
     if dice == 11:
         monster = "Cyclops"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "bite"
+            monster_attack_dmg = 5
+        elif attck_dice == 2:
+            monster_attack = "hit" 
+            monster_attack_dmg = 10
     if dice == 12:
         monster = "Yeti"
+        attck_dice = random.randint(1,2)
+        if attck_dice == 1:
+            monster_attack = "bite"
+            monster_attack_dmg = 5
 def monster_dice_roll():
         monster_dice = random.randint(1, 6)
         if monster_dice == 1:

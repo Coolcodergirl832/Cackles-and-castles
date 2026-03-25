@@ -122,7 +122,7 @@ def the_first_game():
                 fight_count += 1
                 if fight_count % 5 == 0:
                     # Boss battle
-                    monster_type = "Hydraqqqqqqqqqqqqqq"
+                    monster_type = "Hydra"
                     monster_health = 100
                     monster_attack = "power strike"
                     monster_attack_dmg = 15
