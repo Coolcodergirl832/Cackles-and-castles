@@ -1,6 +1,5 @@
 import random
-
-while True:
+def the_first_game():
     game_won = False
     player_name = input("What is your name, traveler? ")
     player_health = 100
@@ -11,6 +10,7 @@ while True:
         if monster_dice == 1:
             monster_type = "witch"
             monster_health = 30
+            
             attack_dice = random.randint(1,2)
             if attack_dice == 1:
                 monster_attack = "potion"
@@ -18,6 +18,8 @@ while True:
             elif attack_dice == 2:
                 monster_attack = "heal" 
                 monster_attack_dmg = 0
+                print(f"the withch heald and now has {monster_health}")
+                monster_health =+ 10
         elif monster_dice == 2:
             monster_type = "goblin"
             monster_health = 20
@@ -122,7 +124,7 @@ while True:
                 fight_count += 1
                 if fight_count % 5 == 0:
                     # Boss battle
-                    monster_type = "Hydraqqqqqqqqqqqqqq"
+                    monster_type = "Hydra"
                     monster_health = 100
                     monster_attack = "power strike"
                     monster_attack_dmg = 15
@@ -401,6 +403,6 @@ while True:
 
     elif choice.lower() == 'n':
         print("Perhaps another time.")
-        break
     else:
         print("Please enter 'y' or 'n'.")
+the_first_game()
