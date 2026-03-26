@@ -32,7 +32,7 @@ def the_second_game():
         # Return all 5 values as a tuple
         return (species, attacks, dmg1, dmg2, dmg3)
     def new_monster_generator():
-        dice = random.randint(1,12)
+        dice = random.randint(1,18)
         if dice == 1:
             monster = "skellaten"
             attck_dice = random.randint(1,2)
@@ -43,7 +43,7 @@ def the_second_game():
                 monster_attack = "call for backup" 
                 monster_attack_dmg = 0
 
-        if dice == 2:
+        elif dice == 2:
             monster = "mummy"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -53,7 +53,7 @@ def the_second_game():
                 monster_attack = "drain life" 
                 monster_attack_dmg = 10
 
-        if dice == 3:
+        elif dice == 3:
             monster = "werewolf"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -62,7 +62,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "howl" 
                 monster_attack_dmg = 0
-        if dice == 4:
+        elif dice == 4:
             monster = "gargoyal"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -72,7 +72,7 @@ def the_second_game():
                 monster_attack = "petrify" 
                 monster_attack_dmg = 10
 
-        if dice == 5:
+        elif dice == 5:
             monster = "Huldra"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -81,7 +81,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "claw swipe" 
                 monster_attack_dmg = 5
-        if dice == 6:
+        elif dice == 6:
             monster = "Liche"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -90,7 +90,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "drain life" 
                 monster_attack_dmg = 5
-        if dice == 7:
+        elif dice == 7:
             monster = "Gremlins"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -99,7 +99,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "bite" 
                 monster_attack_dmg = 5
-        if dice == 8:
+        elif dice == 8:
             monster = "Wraiths"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -108,7 +108,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "hit" 
                 monster_attack_dmg = 5
-        if dice == 9:
+        elif dice == 9:
             monster = "Ghoul"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -117,7 +117,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "hit" 
                 monster_attack_dmg = 10
-        if dice == 10:
+        elif dice == 10:
             monster = "Revenants"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -126,7 +126,7 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "hit" 
                 monster_attack_dmg = 10
-        if dice == 11:
+        elif dice == 11:
             monster = "Cyclops"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
@@ -135,14 +135,14 @@ def the_second_game():
             elif attck_dice == 2:
                 monster_attack = "hit" 
                 monster_attack_dmg = 10
-        if dice == 12:
+        elif dice == 12:
             monster = "Yeti"
             attck_dice = random.randint(1,2)
             if attck_dice == 1:
                 monster_attack = "bite"
                 monster_attack_dmg = 5
-            monster_dice = random.randint(1, 6)
-            if monster_dice == 13:
+            dice = random.randint(1, 6)
+            if dice == 13:
                 monster_type = "witch"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -152,7 +152,7 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "heal" 
                     monster_attack_dmg = 0
-            elif monster_dice == 14:
+            elif dice == 14:
                 monster_type = "goblin"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -162,7 +162,7 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "stab" 
                     monster_attack_dmg = 10
-            elif monster_dice == 15:
+            elif dice == 15:
                 monster_type = "medusa"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -172,7 +172,7 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "paralyze" 
                     monster_attack_dmg = 10
-            elif monster_dice == 16:
+            elif dice == 16:
                 monster_type = "minotaur"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -182,7 +182,7 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "charge" 
                     monster_attack_dmg = 10
-            elif monster_dice == 17:
+            elif dice == 17:
                 monster_type = "cerberus"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -192,7 +192,7 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "bite" 
                     monster_attack_dmg = 10
-            elif monster_dice == 18:
+            elif dice == 18:
                 monster_type = "zombie"
                 monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
@@ -202,12 +202,33 @@ def the_second_game():
                 elif attack_dice == 2:
                     monster_attack = "hit" 
                     monster_attack_dmg = 10
-            
-            return (monster_type,monster_health,monster_attack,monster_attack_dmg)
-            
+            return monster_type, monster_health ,monster_attack,monster_attack_dmg
+                  
     choice = input("welcom back travler our world is in distress agein and you will be the one to save it do you accept this quest (y/n)")
     if choice.lower() == "y":
+        player_health = 100
         print("you are a brave hero saving us again")
+        while player_health >=0:
+            fight_count = 0
+            if fight_count % 5 ==0:
+                pass
+            elif fight_count % 10 == 0:
+                pass
+            elif fight_count % 15 == 0:
+                pass
+            elif fight_count % 15 == 0:
+                pass
+            elif fight_count % 20 == 0:
+                pass
+            elif fight_count % 25 == 0:
+                pass
+            elif fight_count % 30 == 0:
+                pass
+            else:
+                new_monster_generator()
+                input(f"you have encounterd a")
+ 
+
 
 
     elif choice.lower() == "n":
