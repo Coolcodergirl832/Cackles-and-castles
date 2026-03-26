@@ -1,5 +1,36 @@
 import random
 def the_second_game():
+    def Choose_species():
+        player_health = 100
+        player_species = input("What is your species type? (a) troll, (b) orc, (c) vampire, (d) human: ")
+        if player_species.lower() == 'a':
+            print("You have chosen to be a troll, you are strong but slow.")
+            attacks = ["club smash", "ground pound", "troll roar"]
+            dmg1, dmg2, dmg3 = 10, 15, 5
+            species = "troll"
+        elif player_species.lower() == 'b':
+            print("You have chosen to be an orc, you are fierce and powerful but not very smart.")
+            attacks = ["smash", "roar", "charge"]
+            dmg1, dmg2, dmg3 = 5, 10, 15
+            species = "orc"
+        elif player_species.lower() == 'c':
+            print("You have chosen to be a vampire, you are fast and durable but are vulnerable to sunlight.")
+            attacks = ["shriek", "bite", "blood drain"]
+            dmg1, dmg2, dmg3 = 15, 5, 10
+            species = "vampire"
+        elif player_species.lower() == 'd':
+            print("You have chosen to be a human, you are balanced and versatile but not durable.")
+            attacks = ["slash", "stab", "punch"]
+            dmg1, dmg2, dmg3 = 10, 15, 5
+            species = "human"
+        else:
+            print("Invalid choice! species has been set to human by default.")
+            attacks = ["slash", "stab", "punch"]
+            dmg1, dmg2, dmg3 = 10, 15, 5
+            species = "human"
+        
+        # Return all 5 values as a tuple
+        return (species, attacks, dmg1, dmg2, dmg3)
     def new_monster_generator():
         dice = random.randint(1,12)
         if dice == 1:
@@ -113,7 +144,7 @@ def the_second_game():
             monster_dice = random.randint(1, 6)
             if monster_dice == 13:
                 monster_type = "witch"
-                monster_health = 30
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "potion"
@@ -123,7 +154,7 @@ def the_second_game():
                     monster_attack_dmg = 0
             elif monster_dice == 14:
                 monster_type = "goblin"
-                monster_health = 20
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "kick"
@@ -133,7 +164,7 @@ def the_second_game():
                     monster_attack_dmg = 10
             elif monster_dice == 15:
                 monster_type = "medusa"
-                monster_health = 80
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "bite"
@@ -143,7 +174,7 @@ def the_second_game():
                     monster_attack_dmg = 10
             elif monster_dice == 16:
                 monster_type = "minotaur"
-                monster_health = 30
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "horse kick"
@@ -153,7 +184,7 @@ def the_second_game():
                     monster_attack_dmg = 10
             elif monster_dice == 17:
                 monster_type = "cerberus"
-                monster_health = 40
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "triple bite"
@@ -163,7 +194,7 @@ def the_second_game():
                     monster_attack_dmg = 10
             elif monster_dice == 18:
                 monster_type = "zombie"
-                monster_health = 10
+                monster_health = random.randint(10,50)
                 attack_dice = random.randint(1,2)
                 if attack_dice == 1:
                     monster_attack = "bite"
@@ -173,6 +204,7 @@ def the_second_game():
                     monster_attack_dmg = 10
             
             return (monster_type,monster_health,monster_attack,monster_attack_dmg)
+            
     choice = input("welcom back travler our world is in distress agein and you will be the one to save it do you accept this quest (y/n)")
     if choice.lower() == "y":
         print("you are a brave hero saving us again")
