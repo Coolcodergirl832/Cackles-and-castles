@@ -1,11 +1,11 @@
 # rpg_game
-My first python game in a few years
+My first Python game in a few years
 
 
 
 
 
 
-game. py is tthe origanle
+game. py is the original
 
-use main menue CAC.py and CAC_overclocked for a combined expireance
+Use the main menu CAC.py and CAC_overclocked for a combined experience
